@@ -10,6 +10,7 @@ Static help center for Fomo Leads members. Plain HTML, CSS and a little vanilla 
 - `assets/js/search.js` and `assets/js/search-index.js`: client-side search (the same index is also in `search-index.json`)
 - `assets/img/`: annotated screenshots (WebP)
 - `assets/video/`: walkthrough videos (MP4, H.264) and their poster frames
+- `assets/brand/`: Fomo Leads logo and favicons, taken from members.fomoleads.io
 - `404.html`: not-found page
 - `.nojekyll`: tells GitHub Pages to serve files as-is
 - `.github/workflows/pages.yml`: deploys the repo root to GitHub Pages on every push to `main`
