@@ -1,27 +1,106 @@
 <!doctype html>
 <html lang="en" class="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sending Leads to Your CRM by Webhook · Fomo Leads Help Center</title><meta name="description" content="Automatically push every new lead into your CRM.">
+<title>Sending Leads to Your CRM by Webhook · Fomo Leads Help Center</title><meta name="description" content="Push every new lead into your CRM automatically, and sync GoHighLevel stages back to Fomo Leads.">
 <meta name="color-scheme" content="dark"><meta name="theme-color" content="#0C0916">
-<meta property="og:site_name" content="Fomo Leads Help Center"><meta property="og:title" content="Sending Leads to Your CRM by Webhook · Fomo Leads Help Center"><meta property="og:description" content="Automatically push every new lead into your CRM.">
+<meta property="og:site_name" content="Fomo Leads Help Center"><meta property="og:title" content="Sending Leads to Your CRM by Webhook · Fomo Leads Help Center"><meta property="og:description" content="Push every new lead into your CRM automatically, and sync GoHighLevel stages back to Fomo Leads.">
 <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml"><link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="../assets/brand/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../assets/brand/favicon-16.png"><link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css"></head>
-<body><header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html" aria-label="Fomo Leads Help Center home"><img class="brand-logo" src="../assets/brand/logo.webp" alt="Fomo Leads" width="400" height="202"><span class="brand-sub">Help Center</span></a><form class="header-search" action="../index.html" method="get" role="search"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" name="q" placeholder="Search help articles" aria-label="Search help articles" value=""></form><a class="btn btn-accent header-cta" href="https://members.fomoleads.io/login" target="_blank" rel="noopener">Sign in <span aria-hidden="true">→</span></a></div></header><main class="wrap article-layout"><aside class="sidebar"><p class="side-title">Settings &amp; Integrations</p><ul><li><a href="setting-up-your-thank-you-page-and-text-number.html">Setting Up Your Thank-You Page Profile and Text Number</a></li><li><a href="updating-contact-info-and-timezone.html">Updating Your Contact Info and Timezone</a></li><li><a href="sending-leads-to-your-crm-by-webhook.html" aria-current="page" class="current">Sending Leads to Your CRM by Webhook</a></li><li><a href="gohighlevel-disposition-sync.html">GoHighLevel Disposition Sync</a></li><li><a href="push-lead-alerts.html">Turning On Push Lead Alerts</a></li><li><a href="how-will-i-be-notified-of-new-leads.html">How Will I Be Notified of New Leads?</a></li></ul></aside>
+<link rel="stylesheet" href="../assets/css/style.css"><script src="../assets/js/zoom.js" defer></script></head>
+<body><header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html" aria-label="Fomo Leads Help Center home"><img class="brand-logo" src="../assets/brand/logo.webp" alt="Fomo Leads" width="400" height="202"><span class="brand-sub">Help Center</span></a><form class="header-search" action="../index.html" method="get" role="search"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" name="q" placeholder="Search help articles" aria-label="Search help articles" value=""></form><a class="btn btn-accent header-cta" href="https://members.fomoleads.io/login" target="_blank" rel="noopener">Sign in <span aria-hidden="true">→</span></a></div></header><main class="wrap article-layout"><aside class="sidebar"><p class="side-title">Settings &amp; Integrations</p><ul><li><a href="setting-up-your-thank-you-page-and-text-number.html">Set Up Your Thank-You Page</a></li><li><a href="updating-contact-info-and-timezone.html">Updating Your Contact Info and Timezone</a></li><li><a href="sending-leads-to-your-crm-by-webhook.html" aria-current="page" class="current">Sending Leads to Your CRM by Webhook</a></li><li><a href="gohighlevel-disposition-sync.html">GoHighLevel Disposition Sync</a></li><li><a href="push-lead-alerts.html">Turning On Push Lead Alerts</a></li><li><a href="how-will-i-be-notified-of-new-leads.html">How Will I Be Notified of New Leads?</a></li></ul></aside>
 <article class="article"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Help Center</a><span>›</span><a href="../index.html#settings-integrations">Settings &amp; Integrations</a><span>›</span><span aria-current="page">Sending Leads to Your CRM by Webhook</span></nav>
-<h1>Sending Leads to Your CRM by Webhook</h1><p class="lede">Automatically push every new lead into your CRM.</p><figure class="video"><video controls preload="metadata" playsinline poster="../assets/video/crm-webhook-poster.jpg" width="1280" height="720"><source src="../assets/video/crm-webhook.mp4" type="video/mp4">Your browser can't play this video. <a href="../assets/video/crm-webhook.mp4">Download it</a>.</video><figcaption>Video walkthrough: Send leads to your CRM (1:06)</figcaption></figure><div class="prose"><p>Fomo Leads can <strong>POST every lead to your CRM as JSON</strong> the moment it's assigned to you.</p>
-<h3>1. Get a webhook URL from your CRM</h3>
-<p>Create an automation with an <strong>inbound webhook</strong> trigger and copy its URL. In GoHighLevel, go to <strong>Automations → Create Workflow → Start from Scratch → Add New Trigger → Inbound Webhook</strong>.</p>
-<h3>2. Add it to Fomo Leads</h3>
+<h1>Sending Leads to Your CRM by Webhook</h1><p class="lede">Push every new lead into your CRM automatically, and sync GoHighLevel stages back to Fomo Leads.</p><div class="prose"><p>Fomo Leads can send every lead to your CRM as JSON <strong>the moment it's assigned to you</strong>. Set it up in <strong>Integrations</strong> (<a href="https://members.fomoleads.io/integrations" target="_blank" rel="noopener">https://members.fomoleads.io/integrations</a>).</p>
+<h2>🔗 1. Connect your CRM webhook</h2>
+<p>Copy the inbound webhook URL from your CRM, paste it into <strong>Webhook URL</strong> and click <strong>Save</strong>. Then send a test.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../assets/video/crm-01-webhook-poster.jpg" width="1920" height="1080"><source src="../assets/video/crm-01-webhook.mp4" type="video/mp4">Your browser can't play this video. <a href="../assets/video/crm-01-webhook.mp4">Download it</a>.</video><figcaption>Watch: Connect your CRM webhook (1:00)</figcaption></figure>
+<figure class="shot"><a href="../assets/img/webhook-url-save.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/webhook-url-save.webp" alt="Integrations in the left menu (1), Webhook URL (2) and Save (3)" width="756" height="591" style="width:756px" loading="lazy" decoding="async"></a><figcaption>Integrations in the left menu (1), Webhook URL (2) and Save (3) <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
 <ol>
-<li>Go to <a href="https://members.fomoleads.io/integrations" target="_blank" rel="noopener">https://members.fomoleads.io/integrations</a> and find <strong>CRM Webhook</strong>.</li>
+<li>In your CRM, create an automation or workflow with an <strong>inbound webhook</strong> trigger and copy its URL.</li>
+<li>In Fomo Leads, open <strong>Integrations</strong> from the left menu.</li>
 <li>Paste the URL into <strong>Webhook URL</strong> and click <strong>Save</strong>.</li>
+<li>Check that <strong>Automatic delivery</strong> is <strong>On</strong>, so new leads are pushed to your endpoint as they arrive.</li>
+<li>Click <strong>Send test payload</strong>. It unlocks once a URL is saved, and sends a sample lead with the event <code>lead.test</code>. Your endpoint should respond with <strong>HTTP 200</strong>. No real lead data is sent.</li>
 </ol>
-<figure class="shot"><a href="../assets/img/A18-webhook-url-save.webp" target="_blank" rel="noopener"><img src="../assets/img/A18-webhook-url-save.webp" alt="Integrations: Integrations in the sidebar (1), Webhook URL (2) and Save (3)" width="1050" height="500" loading="lazy" decoding="async"></a><figcaption>Integrations: Integrations in the sidebar (1), Webhook URL (2) and Save (3)</figcaption></figure>
-<ol start="3">
-<li>Make sure <strong>Automatic delivery</strong> is <strong>On</strong>.</li>
-<li>Click <strong>Send test payload</strong>. It's available once the URL is saved, and it sends a test event called <code>lead.test</code>.</li>
+<figure class="shot"><a href="../assets/img/webhook-delivery-test.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/webhook-delivery-test.webp" alt="Automatic delivery set to On (1) and Send test payload (2)" width="429" height="418" style="width:429px" loading="lazy" decoding="async"></a><figcaption>Automatic delivery set to On (1) and Send test payload (2) <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
+<h2>🧾 2. Map the fields</h2>
+<p>Real leads arrive with the event <code>lead.assigned</code>. The <strong>Example payload &amp; field mapping</strong> panel shows the exact JSON. Click <strong>Copy</strong> to grab it while you map fields in your CRM.</p>
+<figure class="shot"><a href="../assets/img/webhook-payload.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/webhook-payload.webp" alt="Example payload with the lead.assigned event (1) and Copy (2)" width="591" height="524" style="width:591px" loading="lazy" decoding="async"></a><figcaption>Example payload with the lead.assigned event (1) and Copy (2) <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>event</code></td>
+<td><code>lead.assigned</code> (<code>lead.test</code> for test sends)</td>
+</tr>
+<tr>
+<td><code>lead.id</code></td>
+<td>Unique lead identifier</td>
+</tr>
+<tr>
+<td><code>lead.lead_type</code></td>
+<td>Product type, e.g. <code>mortgage_protection</code></td>
+</tr>
+<tr>
+<td><code>lead.state</code></td>
+<td>US state, 2-letter code</td>
+</tr>
+<tr>
+<td><code>lead.first_name</code> / <code>lead.last_name</code></td>
+<td>Contact name</td>
+</tr>
+<tr>
+<td><code>lead.email</code></td>
+<td>Contact email address</td>
+</tr>
+<tr>
+<td><code>lead.phone</code></td>
+<td>Contact phone number</td>
+</tr>
+<tr>
+<td><code>lead.payload.age</code></td>
+<td>Selected age range, e.g. 50-59</td>
+</tr>
+<tr>
+<td><code>lead.payload.mortgage_balance</code></td>
+<td>Selected mortgage balance range</td>
+</tr>
+<tr>
+<td><code>lead.payload.zip</code></td>
+<td>ZIP code</td>
+</tr>
+<tr>
+<td><code>lead.payload.otp_verified</code></td>
+<td>Phone verification status, when recorded</td>
+</tr>
+<tr>
+<td><code>lead.created_at</code></td>
+<td>ISO 8601 time the lead was delivered to you</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="shot"><a href="../assets/img/webhook-field-mapping.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/webhook-field-mapping.webp" alt="Example payload and the full field mapping table" width="591" height="975" style="width:591px" loading="lazy" decoding="async"></a><figcaption>Example payload and the full field mapping table <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
+<h2>🔁 3. GoHighLevel: sync stages back to Fomo Leads</h2>
+<p>When your team moves a lead to a new stage in GoHighLevel, its stage in Fomo Leads updates too, so your stats stay current without double entry.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../assets/video/crm-02-gohighlevel-poster.jpg" width="1920" height="1080"><source src="../assets/video/crm-02-gohighlevel.mp4" type="video/mp4">Your browser can't play this video. <a href="../assets/video/crm-02-gohighlevel.mp4">Download it</a>.</video><figcaption>Watch: GoHighLevel disposition sync (1:18)</figcaption></figure>
+<figure class="shot"><a href="../assets/img/ghl-dispositions.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/ghl-dispositions.webp" alt="GoHighLevel dispositions: Create webhook URL (1), setup steps (2), Add stage name (3) and Save stage names (4)" width="1010" height="657" style="width:1010px" loading="lazy" decoding="async"></a><figcaption>GoHighLevel dispositions: Create webhook URL (1), setup steps (2), Add stage name (3) and Save stage names (4) <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
+<ol>
+<li>In <strong>GoHighLevel dispositions</strong>, click <strong>Create webhook URL</strong>. This makes a private URL for your workflow. Anyone with it can update your leads' stages, so keep it inside GoHighLevel.</li>
+<li>In GoHighLevel, open <strong>Automation → Workflows</strong> and create a new workflow.</li>
+<li>Add the trigger <strong>Pipeline stage changed</strong>. To also catch deals marked won or lost, add <strong>Opportunity status changed</strong> as a second trigger.</li>
+<li>Add the action <strong>Webhook</strong> (or <strong>Custom webhook</strong>) and set the method to <strong>POST</strong>.</li>
+<li>Paste your webhook URL into the URL field.</li>
+<li>Under <strong>Custom Data</strong>, add <code>stage</code> with the value <code>{{opportunity.pipeline_stage}}</code>, and <code>ap</code> with the field where you record annual premium. If you keep the FOMO lead ID in a custom field, add <code>fomo_lead_id</code> too (optional).</li>
+<li>Save the workflow and publish it.</li>
 </ol>
-<figure class="shot"><a href="../assets/img/A19-webhook-delivery-test.webp" target="_blank" rel="noopener"><img src="../assets/img/A19-webhook-delivery-test.webp" alt="Automatic delivery switch set to On (1) and Send test payload (2)" width="482" height="454" loading="lazy" decoding="async"></a><figcaption>Automatic delivery switch set to On (1) and Send test payload (2)</figcaption></figure>
-<h3>3. Map the fields</h3>
-<p>Real leads arrive with the event <code>lead.assigned</code>. The <strong>example payload</strong> on <a href="https://members.fomoleads.io/integrations" target="_blank" rel="noopener">https://members.fomoleads.io/integrations</a> shows every field. Map those fields to your CRM contact fields, then publish your workflow.</p>
-<figure class="shot"><a href="../assets/img/A20-webhook-payload.webp" target="_blank" rel="noopener"><img src="../assets/img/A20-webhook-payload.webp" alt="Example payload with the lead.assigned event (1) and the Copy button (2)" width="610" height="530" loading="lazy" decoding="async"></a><figcaption>Example payload with the lead.assigned event (1) and the Copy button (2)</figcaption></figure></div><nav class="pager"><a class="prev" href="updating-contact-info-and-timezone.html"><span>Previous</span>Updating Your Contact Info and Timezone</a><a class="next" href="gohighlevel-disposition-sync.html"><span>Next</span>GoHighLevel Disposition Sync</a></nav><section class="related"><h2>Related articles</h2><ul><li><a href="setting-up-your-thank-you-page-and-text-number.html">Setting Up Your Thank-You Page Profile and Text Number</a></li><li><a href="updating-contact-info-and-timezone.html">Updating Your Contact Info and Timezone</a></li><li><a href="gohighlevel-disposition-sync.html">GoHighLevel Disposition Sync</a></li><li><a href="push-lead-alerts.html">Turning On Push Lead Alerts</a></li><li><a href="how-will-i-be-notified-of-new-leads.html">How Will I Be Notified of New Leads?</a></li></ul></section></article></main><footer class="site-footer"><div class="wrap footer-inner"><div class="footer-brand"><img src="../assets/brand/logo.webp" alt="Fomo Leads" width="400" height="202" loading="lazy"><p>Choose your states. Get your leads. Keep everything in one place.</p></div><div class="footer-help"><p class="footer-title">Still need help?</p><p>Need a hand? <a href="mailto:support@fomoleads.io">Contact support</a> at support@fomoleads.io.</p><p><a href="https://members.fomoleads.io" target="_blank" rel="noopener">Member area</a> · <a href="../index.html">Help Center home</a></p></div></div></footer></body></html>
+<ul>
+<li>Each update is matched to your lead by FOMO lead ID when it's sent, otherwise by phone, then email. Only your own leads can change.</li>
+<li>Under <strong>Your stage names</strong>, tell us what your GoHighLevel stages mean with <strong>Add stage name</strong>, then click <strong>Save stage names</strong>. Names only count when the whole name matches (ignoring capitals, spaces and symbols), a lead never moves backward, and sold deals need an AP.</li>
+</ul>
+<figure class="shot"><a href="../assets/img/ghl-activity.webp" target="_blank" rel="noopener" title="Open full size"><img src="../assets/img/ghl-activity.webp" alt="Recent activity with Refresh (1)" width="1010" height="119" style="width:1010px" loading="lazy" decoding="async"></a><figcaption>Recent activity with Refresh (1) <span class="zoom-hint">· Click to enlarge</span></figcaption></figure>
+<ul>
+<li><strong>Recent activity</strong> shows each update once your workflow is live. Click <strong>Refresh</strong> to check for new ones.</li>
+</ul></div><nav class="pager"><a class="prev" href="updating-contact-info-and-timezone.html"><span>Previous</span>Updating Your Contact Info and Timezone</a><a class="next" href="gohighlevel-disposition-sync.html"><span>Next</span>GoHighLevel Disposition Sync</a></nav><section class="related"><h2>Related articles</h2><ul><li><a href="setting-up-your-thank-you-page-and-text-number.html">Set Up Your Thank-You Page</a></li><li><a href="updating-contact-info-and-timezone.html">Updating Your Contact Info and Timezone</a></li><li><a href="gohighlevel-disposition-sync.html">GoHighLevel Disposition Sync</a></li><li><a href="push-lead-alerts.html">Turning On Push Lead Alerts</a></li><li><a href="how-will-i-be-notified-of-new-leads.html">How Will I Be Notified of New Leads?</a></li></ul></section></article></main><footer class="site-footer"><div class="wrap footer-inner"><div class="footer-brand"><img src="../assets/brand/logo.webp" alt="Fomo Leads" width="400" height="202" loading="lazy"><p>Choose your states. Get your leads. Keep everything in one place.</p></div><div class="footer-help"><p class="footer-title">Still need help?</p><p>Need a hand? <a href="mailto:support@fomoleads.io">Contact support</a> at support@fomoleads.io.</p><p><a href="https://members.fomoleads.io" target="_blank" rel="noopener">Member area</a> · <a href="../index.html">Help Center home</a></p></div></div></footer></body></html>

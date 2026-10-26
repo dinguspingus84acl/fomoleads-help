@@ -8,20 +8,20 @@ Static help center for Fomo Leads members. Plain HTML, CSS and a little vanilla 
 - `articles/<slug>.html`: one page per article
 - `assets/css/style.css`: styles
 - `assets/js/search.js` and `assets/js/search-index.js`: client-side search (the same index is also in `search-index.json`)
-- `assets/img/`: annotated screenshots (WebP)
-- `assets/video/`: walkthrough videos (MP4, H.264) and their poster frames
+- `assets/img/`: annotated screenshots (lossless WebP at 2x; click one to see it full size)
+- `assets/video/`: step-by-step screen recordings (1080p MP4, H.264) and their poster frames
+- `assets/js/zoom.js`: opens screenshots full size
 - `assets/brand/`: Fomo Leads logo and favicons, taken from members.fomoleads.io
 - `404.html`: not-found page
 - `.nojekyll`: tells GitHub Pages to serve files as-is
-- `.github/workflows/pages.yml`: deploys the repo root to GitHub Pages on every push to `main`
 
 All links are relative, so the site works at a project URL such as `https://<user>.github.io/<repo>/` or on a custom domain.
 
 ## Publish on GitHub Pages
 
 1. Create a repository and push these files to the `main` branch, with this folder as the repo root.
-2. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. Push to `main` (or run the workflow manually from the **Actions** tab). The site URL appears in the workflow run.
+2. In the repository, open **Settings → Pages** and set **Source** to **Deploy from a branch**, branch `main`, folder `/ (root)`.
+3. Push to `main`. Pages republishes within a minute or two.
 
 ## Preview locally
 
